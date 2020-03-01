@@ -9,7 +9,7 @@ var orm = {
   selectAll: function (cb) {
     connection.query("SELECT * FROM burgers;", function (err, result) {
       if (err) {
-        return res.status(500).end();
+        return result.status(500).end();
       }
 
       cb(result);
@@ -22,7 +22,7 @@ var orm = {
   insertOne: function (name, cb) {
     connection.query("INSERT INTO burgers (burger_name) VALUES (?);", name, function (err, result) {
       if (err) {
-        return res.status(500).end();
+        return result.status(500).end();
       };
       console.log(result);
       cb(result);
@@ -32,9 +32,11 @@ var orm = {
 
   // changes devoured from false to true.
 
-  updateOne: function (id, cb) {
-    connection.query("UPDATE burgers SET devoured = true WHERE id ?;", id, function (err, result) {
-      if (err) { return res.status(500).end(); }
+  updateOne: function (condition, id, cb) {
+    connection.query("UPDATE burgers SET devoured = ? WHERE id = ?;", [condition, id], function (err, result) {
+      if (err) {
+        throw err;
+      }
       console.log(result);
       cb(result);
     })

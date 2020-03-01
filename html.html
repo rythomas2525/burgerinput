@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <title>Burger Input</title>
+</head>
+
+
+
+<body class="#e1bee7 purple lighten-4">
+    <nav>
+        <div class="nav-wrapper purple darken-1">
+            <a href="#" class="brand-logo center">Burger Input</a>
+        </div>
+
+    </nav>
+    <div class="container " style="margin-top: 100px;">
+        <!-- Page Content goes here -->
+
+        <row>
+
+
+
+
+            <div class="row">
+                <h4 class="col s3 offset-s1"> Eat a burger!</h4>
+                <h4 class="col s4 offset-s3"> Burgers devoured!</h4>
+            </div>
+            <div class="row">
+
+                <button class="col s3 offset-s1 purple purple darken-1" style="height: 60px;">{{burger}}</button>
+            </div>
+            <div class="row">
+                <button class="col s3 offset-s1 purple purple darken-1" style=" height: 60px;">in-N-out</button>
+            </div>
+            <div class="row">
+                <button class="col s3 offset-s1 purple purple darken-1" style="height: 60px;">Five Guys</button>
+            </div>
+            <h4 class="col s3 offset-s3 center" style="margin-top: 40px;"> Add a burger!</h4>
+
+            <div class="row" style="margin-top: 40px;">
+
+                <form>
+                    <div class="offset-s4 center white input-field col s3"
+                        style="height: 37px; justify-content: center;">
+                        <input value="" id="burger" type="text" class="validate">
+                    </div>
+                    <button class="btn waves-effect waves-light purple darken-1" type="submit" name="action"
+                        style="margin-top: 15px;">Submit
+                    </button>
+                </form>
+            </div>
+        </row>
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+
+</html>
